@@ -37,7 +37,7 @@ async def Verifica(ctx):
 # Comando per visualizzare i giocatori online su Minecraft
 @bot.command()
 async def Server(ctx):
-    server = JavaServer.lookup("diamondmc1.aternos.me:17524")
+    server = JavaServer.lookup("server ip")
     status = server.status()
     if status.players.online > 0:
         player_names = ', '.join([player.name for player in status.players.sample])
