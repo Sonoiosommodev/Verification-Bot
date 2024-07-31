@@ -34,16 +34,6 @@ async def Verifica(ctx):
   embed = discord.Embed(title = "Verifica", description = "Clicca qua giù per verificarti.")
   await ctx.send(embed = embed, view = Verification())
 
-# Comando per visualizzare i giocatori online su Minecraft
-@bot.command()
-async def Server(ctx):
-    server = JavaServer.lookup("server ip")
-    status = server.status()
-    if status.players.online > 0:
-        player_names = ', '.join([player.name for player in status.players.sample])
-        await ctx.send(f'Giocatori online: {status.players.online}\nNomi: {player_names}')
-    else:
-        await ctx.send('Nessun giocatore online al momento.')
 
 # Avvia il bot
 bot.run('token')
