@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 from discord.ui import Button, View 
-from mcstatus import JavaServer
 
 intents = discord.Intents.default()
 intents.messages = True
